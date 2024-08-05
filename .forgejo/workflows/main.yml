@@ -42,7 +42,7 @@ jobs:
         id: output-sizes
         run: |
           . /opt/build.sh
-          .github/workflows/getSize.sh "$BUILD_DIR"/src/pinetime-app-*.out >> $GITHUB_OUTPUT
+          .forgejo/workflows/getSize.sh "$BUILD_DIR"/src/pinetime-app-*.out >> $GITHUB_OUTPUT
       # Unzip the package because Upload Artifact will zip up the files
       - name: Unzip DFU package
         run: unzip ./build/output/pinetime-mcuboot-app-dfu-*.zip -d ./build/output/pinetime-mcuboot-app-dfu
